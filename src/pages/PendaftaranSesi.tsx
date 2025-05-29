@@ -6,8 +6,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { useToast } from '@/hooks/use-toast';
 
 const PendaftaranSesi = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     nama: '',
     email: '',
@@ -39,9 +41,57 @@ const PendaftaranSesi = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.nama || !formData.email || !formData.telepon || !formData.sekolah || 
+        !formData.kelas || !formData.topik || !formData.jadwal || !formData.formatSesi) {
+      toast({
+        title: "Form Tidak Lengkap",
+        description: "Mohon lengkapi semua field yang diperlukan.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Find selected schedule
+    const selectedJadwal = jadwalOptions.find(j => j.id === formData.jadwal);
+    
+    // Format WhatsApp message
+    const whatsappMessage = `*PENDAFTARAN SESI KONSELING*
+
+*Informasi Pribadi:*
+Nama: ${formData.nama}
+Email: ${formData.email}
+Telepon: ${formData.telepon}
+Sekolah: ${formData.sekolah}
+Kelas: ${formData.kelas}
+
+*Detail Sesi:*
+Topik: ${formData.topik}
+Format: ${formData.formatSesi === 'online' ? 'Sesi Online' : 'Sesi Tatap Muka'}
+Jadwal: ${selectedJadwal ? `${selectedJadwal.hari}, ${selectedJadwal.waktu}` : 'Tidak ditemukan'}
+
+Terima kasih atas pendaftaran Anda. Mohon konfirmasi ketersediaan jadwal.`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // WhatsApp phone number (you can change this to your actual number)
+    const phoneNumber = "6281234567890"; // Replace with actual WhatsApp number
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
+    toast({
+      title: "Berhasil!",
+      description: "Data pendaftaran telah disiapkan untuk dikirim via WhatsApp.",
+    });
+    
     console.log('Form submitted:', formData);
-    // Handle form submission logic here
-    alert('Pendaftaran berhasil! Tim kami akan menghubungi Anda segera.');
   };
 
   const handleInputChange = (field: string, value: string) => {
