@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, GraduationCap } from 'lucide-react';
@@ -10,8 +9,7 @@ const Navbar = () => {
   const navigation = [
     { name: 'Beranda', href: '/' },
     { name: 'Artikel Pendidikan', href: '/topik-konseling' },
-    { name: 'Kuis Pendidikan', href: '/pendaftaran' },
-    { name: 'Media Edukasi', href: '/media-edukasi' }
+    { name: 'Kuis Pendidikan', href: '/pendaftaran' }
   ];
 
   const isActive = (path: string) => location.pathname === path;

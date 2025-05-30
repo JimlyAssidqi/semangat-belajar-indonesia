@@ -1,4 +1,3 @@
-
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import { Link } from 'react-router-dom';
@@ -20,11 +19,6 @@ const Beranda = () => {
       icon: <TrendingUp className="h-12 w-12 text-blue-600" />,
       title: "Peningkatan Pemahaman",
       description: "Metode pembelajaran yang terbukti efektif untuk mengoptimalkan hasil belajar"
-    },
-    {
-      icon: <Award className="h-12 w-12 text-blue-600" />,
-      title: "Media Edukasi",
-      description: "Konten multimedia yang mendukung proses pembelajaran interaktif"
     }
   ];
 
@@ -65,7 +59,7 @@ const Beranda = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
                 <div className="flex justify-center mb-4">

@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 import Beranda from "./pages/Beranda";
 import TopikKonseling from "./pages/TopikKonseling";
 import PendaftaranSesi from "./pages/PendaftaranSesi";
-import MediaEdukasi from "./pages/MediaEdukasi";
 import NotFound from "./pages/NotFound";
 import ArticleDetail from "./pages/ArticleDetail";
 
@@ -28,7 +27,6 @@ const App = () => (
               <Route path="/" element={<Beranda />} />
               <Route path="/topik-konseling" element={<TopikKonseling />} />
               <Route path="/pendaftaran" element={<PendaftaranSesi />} />
-              <Route path="/media-edukasi" element={<MediaEdukasi />} />
               <Route path="/artikel/:id" element={<ArticleDetail />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
