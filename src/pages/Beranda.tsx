@@ -1,30 +1,29 @@
-
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import { Link } from 'react-router-dom';
-import { Calendar, Star, TrendingUp, Award } from 'lucide-react';
+import { Calendar, Star, TrendingUp, Award, BookOpen, Brain } from 'lucide-react';
 
 const Beranda = () => {
   const features = [
     {
-      icon: <Calendar className="h-12 w-12 text-blue-600" />,
-      title: "Sesi Terjadwal",
-      description: "Jadwal konseling yang fleksibel sesuai kebutuhan siswa"
+      icon: <BookOpen className="h-12 w-12 text-blue-600" />,
+      title: "Artikel Pendidikan",
+      description: "Kumpulan artikel berkualitas tentang dunia pendidikan dan pengembangan diri"
     },
     {
-      icon: <Star className="h-12 w-12 text-blue-600" />,
-      title: "Konselor Berpengalaman",
-      description: "Tim profesional dengan keahlian di bidang pendidikan"
+      icon: <Brain className="h-12 w-12 text-blue-600" />,
+      title: "Kuis Interaktif",
+      description: "Uji pemahaman Anda dengan kuis yang memberikan feedback langsung"
     },
     {
       icon: <TrendingUp className="h-12 w-12 text-blue-600" />,
-      title: "Peningkatan Prestasi",
-      description: "Metode terbukti untuk mengoptimalkan hasil belajar"
+      title: "Peningkatan Pemahaman",
+      description: "Metode pembelajaran yang terbukti efektif untuk mengoptimalkan hasil belajar"
     },
     {
       icon: <Award className="h-12 w-12 text-blue-600" />,
-      title: "Sertifikat Partisipasi",
-      description: "Pengakuan resmi atas keikutsertaan dalam program"
+      title: "Evaluasi Berkelanjutan",
+      description: "Sistem feedback yang membantu memantau perkembangan pembelajaran"
     }
   ];
 
@@ -61,7 +60,7 @@ const Beranda = () => {
               Mengapa Memilih EduCounsel?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Kami menyediakan pendekatan holistik untuk pengembangan akademik dan personal siswa
+              Platform pembelajaran interaktif yang menggabungkan artikel berkualitas dengan kuis yang memberikan feedback langsung
             </p>
           </div>
           
@@ -86,20 +85,20 @@ const Beranda = () => {
             Siap Memulai Perjalanan Pendidikanmu?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Bergabunglah dengan ribuan siswa yang telah merasakan manfaat konseling kelompok kami
+            Baca artikel pendidikan dan uji pemahaman Anda dengan kuis interaktif kami
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/pendaftaran"
               className="inline-flex items-center justify-center px-8 py-3 bg-yellow-400 text-blue-900 font-semibold rounded-lg hover:bg-yellow-300 transition-colors duration-200"
             >
-              Daftar Konseling Gratis
+              Mulai Kuis Gratis
             </Link>
             <Link
               to="/topik-konseling"
               className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-700 transition-colors duration-200"
             >
-              Lihat Topik Konseling
+              Baca Artikel Pendidikan
             </Link>
           </div>
         </div>

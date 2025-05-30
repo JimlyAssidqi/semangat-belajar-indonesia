@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, BookOpen } from 'lucide-react';
@@ -7,13 +6,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const navItems = [
-    { name: 'Beranda', path: '/' },
-    { name: 'Profil Layanan', path: '/profil-layanan' },
-    { name: 'Topik Konseling', path: '/topik-konseling' },
-    { name: 'Pendaftaran Sesi', path: '/pendaftaran' },
-    { name: 'Media Edukasi', path: '/media-edukasi' },
-    { name: 'Evaluasi & Feedback', path: '/evaluasi' },
+  const navigation = [
+    { name: 'Beranda', href: '/' },
+    { name: 'Profil Layanan', href: '/profil-layanan' },
+    { name: 'Artikel Pendidikan', href: '/topik-konseling' },
+    { name: 'Kuis Pendidikan', href: '/pendaftaran' },
+    { name: 'Media Edukasi', href: '/media-edukasi' },
+    { name: 'Evaluasi & Feedback', href: '/evaluasi' }
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -31,12 +30,12 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navigation.map((item) => (
               <Link
                 key={item.name}
-                to={item.path}
+                to={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.path)
+                  isActive(item.href)
                     ? 'text-blue-600 bg-blue-50'
                     : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                 }`}
@@ -61,13 +60,13 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-              {navItems.map((item) => (
+              {navigation.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.path}
+                  to={item.href}
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    isActive(item.path)
+                    isActive(item.href)
                       ? 'text-blue-600 bg-blue-50'
                       : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                   }`}
