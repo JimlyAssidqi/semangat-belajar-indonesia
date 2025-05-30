@@ -103,10 +103,13 @@ const TopikKonseling = () => {
                     {article.excerpt}
                   </p>
                   
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center">
+                  <Link 
+                    to={`/artikel/${article.id}`}
+                    className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
+                  >
                     <BookOpen className="w-4 h-4 mr-2" />
                     Baca Artikel
-                  </button>
+                  </Link>
                 </div>
               </article>
             ))}

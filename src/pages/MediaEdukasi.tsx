@@ -1,11 +1,12 @@
 
 import React from 'react';
 import { BookOpen, Clock, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const MediaEdukasi = () => {
   const articles = [
     {
-      id: 1,
+      id: 7,
       title: "5 Strategi Ampuh Meningkatkan Motivasi Belajar",
       excerpt: "Temukan cara-cara efektif untuk mempertahankan semangat belajar dan mencapai prestasi akademik yang optimal.",
       author: "Dr. Sarah Wijaya",
@@ -15,7 +16,7 @@ const MediaEdukasi = () => {
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop"
     },
     {
-      id: 2,
+      id: 8,
       title: "Teknik Pomodoro: Revolusi Manajemen Waktu untuk Pelajar",
       excerpt: "Pelajari teknik manajemen waktu yang telah terbukti meningkatkan produktivitas belajar secara signifikan.",
       author: "Prof. Ahmad Santoso",
@@ -25,7 +26,7 @@ const MediaEdukasi = () => {
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=250&fit=crop"
     },
     {
-      id: 3,
+      id: 9,
       title: "Memilih Jurusan Kuliah: Panduan Lengkap untuk Siswa SMA",
       excerpt: "Panduan komprehensif untuk membantu siswa SMA menentukan pilihan jurusan yang tepat sesuai minat dan bakat.",
       author: "Dra. Rina Kartika",
@@ -35,7 +36,7 @@ const MediaEdukasi = () => {
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop"
     },
     {
-      id: 4,
+      id: 10,
       title: "Mengatasi Kecemasan Ujian dengan Teknik Relaksasi",
       excerpt: "Teknik-teknik praktis untuk mengelola stres dan kecemasan sebelum dan selama menghadapi ujian penting.",
       author: "Psikolog Maya Sari",
@@ -45,7 +46,7 @@ const MediaEdukasi = () => {
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop"
     },
     {
-      id: 5,
+      id: 11,
       title: "Strategi Mencatat yang Efektif untuk Berbagai Mata Pelajaran",
       excerpt: "Metode mencatat yang disesuaikan dengan karakteristik mata pelajaran untuk memaksimalkan pemahaman.",
       author: "Dr. Budi Hartono",
@@ -55,7 +56,7 @@ const MediaEdukasi = () => {
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop"
     },
     {
-      id: 6,
+      id: 12,
       title: "Membangun Kebiasaan Belajar yang Berkelanjutan",
       excerpt: "Tips praktis untuk membentuk rutina belajar yang konsisten dan berkelanjutan dalam jangka panjang.",
       author: "Dr. Lisa Permata",
@@ -148,10 +149,13 @@ const MediaEdukasi = () => {
                   </div>
                 </div>
                 
-                <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors duration-200 flex items-center justify-center">
+                <Link 
+                  to={`/artikel/${article.id}`}
+                  className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors duration-200 flex items-center justify-center"
+                >
                   <BookOpen className="w-4 h-4 mr-2" />
                   Baca Artikel
-                </button>
+                </Link>
               </div>
             </article>
           ))}

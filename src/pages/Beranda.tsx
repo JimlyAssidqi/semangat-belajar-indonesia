@@ -1,3 +1,4 @@
+
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import { Link } from 'react-router-dom';
@@ -22,8 +23,8 @@ const Beranda = () => {
     },
     {
       icon: <Award className="h-12 w-12 text-blue-600" />,
-      title: "Evaluasi Berkelanjutan",
-      description: "Sistem feedback yang membantu memantau perkembangan pembelajaran"
+      title: "Media Edukasi",
+      description: "Konten multimedia yang mendukung proses pembelajaran interaktif"
     }
   ];
 
@@ -31,19 +32,19 @@ const Beranda = () => {
     {
       name: "Sarah Putri",
       grade: "Kelas 12 SMA",
-      text: "Program konseling ini benar-benar membantu saya mengatur waktu belajar dan meningkatkan motivasi untuk meraih cita-cita.",
+      text: "Platform ini benar-benar membantu saya memahami konsep-konsep pendidikan dengan cara yang menyenangkan dan interaktif.",
       rating: 5
     },
     {
       name: "Ahmad Rizki",
       grade: "Kelas 11 SMA", 
-      text: "Saya belajar banyak strategi belajar efektif yang sebelumnya tidak pernah saya ketahui. Nilai ujian saya meningkat drastis!",
+      text: "Saya belajar banyak strategi belajar efektif melalui artikel dan kuis yang disediakan. Sangat bermanfaat!",
       rating: 5
     },
     {
       name: "Maya Sari",
       grade: "Kelas 10 SMA",
-      text: "Atmosfer kelompok yang supportif membuat saya lebih percaya diri dalam menghadapi tantangan akademik.",
+      text: "Kuis dengan feedback langsung membuat saya lebih mudah memahami materi dan meningkatkan hasil belajar.",
       rating: 5
     }
   ];
@@ -57,7 +58,7 @@ const Beranda = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Mengapa Memilih EduCounsel?
+              Mengapa Memilih Counseling Education?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Platform pembelajaran interaktif yang menggabungkan artikel berkualitas dengan kuis yang memberikan feedback langsung
@@ -109,10 +110,10 @@ const Beranda = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Apa Kata Peserta Kami?
+              Apa Kata Pengguna Kami?
             </h2>
             <p className="text-xl text-gray-600">
-              Dengarkan pengalaman siswa yang telah merasakan manfaat program kami
+              Dengarkan pengalaman siswa yang telah merasakan manfaat platform kami
             </p>
           </div>
           

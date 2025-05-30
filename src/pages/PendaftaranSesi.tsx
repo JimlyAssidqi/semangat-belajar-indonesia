@@ -69,6 +69,66 @@ const PendaftaranSesi = () => {
       ],
       correct: 1,
       explanation: "Mengelola stres akademik memerlukan pendekatan holistik: manajemen waktu yang baik, istirahat yang cukup, dan tidak ragu mencari bantuan ketika diperlukan."
+    },
+    {
+      id: 6,
+      question: "Apa yang dimaksud dengan pembelajaran kolaboratif?",
+      options: [
+        "Belajar sendirian tanpa bantuan orang lain",
+        "Bekerja sama dengan teman untuk mencapai tujuan pembelajaran bersama",
+        "Meniru pekerjaan teman tanpa memahami",
+        "Berkompetisi dengan teman sekelas"
+      ],
+      correct: 1,
+      explanation: "Pembelajaran kolaboratif melibatkan kerjasama antar siswa untuk saling membantu mencapai pemahaman yang lebih mendalam melalui diskusi dan berbagi ide."
+    },
+    {
+      id: 7,
+      question: "Mengapa penting untuk menetapkan tujuan dalam belajar?",
+      options: [
+        "Untuk terlihat lebih pintar dari teman",
+        "Memberikan arah dan motivasi dalam proses pembelajaran",
+        "Agar bisa mendapat pujian dari guru",
+        "Untuk memenuhi kewajiban sebagai siswa"
+      ],
+      correct: 1,
+      explanation: "Menetapkan tujuan pembelajaran memberikan arah yang jelas, meningkatkan motivasi, dan membantu mengukur kemajuan dalam proses belajar."
+    },
+    {
+      id: 8,
+      question: "Metode evaluasi diri yang efektif dalam pembelajaran adalah:",
+      options: [
+        "Hanya melihat nilai ujian",
+        "Refleksi terhadap proses belajar dan pemahaman materi",
+        "Membandingkan nilai dengan teman",
+        "Menghindari feedback dari guru"
+      ],
+      correct: 1,
+      explanation: "Evaluasi diri yang efektif melibatkan refleksi mendalam terhadap proses pembelajaran, pemahaman materi, dan identifikasi area yang perlu diperbaiki."
+    },
+    {
+      id: 9,
+      question: "Apa peran teknologi dalam pendidikan modern?",
+      options: [
+        "Hanya sebagai hiburan di waktu luang",
+        "Alat bantu yang mempermudah akses informasi dan pembelajaran interaktif",
+        "Pengganti total untuk guru dan buku",
+        "Sumber gangguan dalam belajar"
+      ],
+      correct: 1,
+      explanation: "Teknologi berperan sebagai alat bantu yang memperkaya pengalaman pembelajaran dengan menyediakan akses informasi yang luas dan metode pembelajaran yang interaktif."
+    },
+    {
+      id: 10,
+      question: "Bagaimana cara mengembangkan keterampilan berpikir kritis?",
+      options: [
+        "Menerima semua informasi tanpa pertanyaan",
+        "Menganalisis, mengevaluasi, dan mempertanyakan informasi yang diterima",
+        "Hanya percaya pada satu sumber informasi",
+        "Menghindari diskusi dan debat"
+      ],
+      correct: 1,
+      explanation: "Keterampilan berpikir kritis dikembangkan melalui analisis mendalam, evaluasi bukti, mempertanyakan asumsi, dan mempertimbangkan berbagai perspektif."
     }
   ];
 

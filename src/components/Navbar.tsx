@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, BookOpen } from 'lucide-react';
+import { Menu, X, GraduationCap } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,11 +9,9 @@ const Navbar = () => {
 
   const navigation = [
     { name: 'Beranda', href: '/' },
-    { name: 'Profil Layanan', href: '/profil-layanan' },
     { name: 'Artikel Pendidikan', href: '/topik-konseling' },
     { name: 'Kuis Pendidikan', href: '/pendaftaran' },
-    { name: 'Media Edukasi', href: '/media-edukasi' },
-    { name: 'Evaluasi & Feedback', href: '/evaluasi' }
+    { name: 'Media Edukasi', href: '/media-edukasi' }
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -23,8 +22,8 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <BookOpen className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-800">EduCounsel</span>
+              <GraduationCap className="h-8 w-8 text-blue-600" />
+              <span className="text-xl font-bold text-gray-800">Counseling Education</span>
             </Link>
           </div>
 
